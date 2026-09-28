@@ -33,6 +33,10 @@ public:
             {//Movement - 2
                     ButtonInfo {.buttonText = "back", .method = []() { Settings::setCurrentCategory(0); }, .isTogglable = false, .toolTip = "Goes back to main menu"},
                     ButtonInfo {.buttonText = "Plats", .method = []() { MovementMods::platforms(); }, .toolTip = "Plats"},
+                    ButtonInfo {.buttonText = "NoTagFreeze", .method = []() { MovementMods::NoTagFreeze(); }, .toolTip = "No Tag Freeze"},
+                    ButtonInfo {.buttonText = "Fly", .method = []() { MovementMods::Fly(); }, .toolTip = "Hand Fly"},
+                    ButtonInfo {.buttonText = "LongArms", .method = []() { MovementMods::LongArms(); }, .toolTip = "Long Arms"}, 
+                    ButtonInfo {.buttonText = "NoClip", .method = []() { MovementMods::NoClip(); }, .toolTip = "NoClip"},
             },
             {//Player - 3
                     ButtonInfo {.buttonText = "back", .method = []() { Settings::setCurrentCategory(0); }, .isTogglable = false, .toolTip = "Goes back to main menu"},
