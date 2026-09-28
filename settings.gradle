@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "HoldableTemplate"
+rootProject.name = "MHMENU"
 include ':app'
