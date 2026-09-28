@@ -92,6 +92,7 @@ public:
         } else {
             gun.Cleanup();
         }
+    }
         static void NoTagFreeze() {
         auto gorillaPlayerObj = GameObject::Find("GorillaPlayer");
         if (!gorillaPlayerObj) return;
@@ -103,5 +104,36 @@ public:
             *ptr = false;
         }
     }
+        public:static void Fly()
+    {
+        float trigR = XRInput::GetFloatFeature(FloatFeature::Trigger, Controller::Right);
+        if (trigR > 0.5f) {
+            Transform handR = GameObject::Find("RightHand Controller")->GetTransform();
+            Rigidbodyrigidbody = (Rigidbody ) GameObject::Find("GorillaPlayer")->GetComponent(
+                    Rigidbody::GetType());
+            Vector3 force = handR->GetForward() 15.0f;
+            rigidbody->SetVelocity(force);
+        }
+    }
+         public:static void LongArms() {
+              GameObject *player = GameObject::Find("GorillaPlayer");
+            player->GetTransform()->SetLocalScale(Vector3(1.24f, 1.24f, 1.24f));
+    }
+static void NoClip() {
+        {
+            static bool lastVal = false;
+
+            bool secon = XRInput::GetBoolFeature(BoolFeature::TriggerButton, Controller::Right);
+            if (lastVal != secon) {
+                lastVal = secon;
+                auto things = GameObject::FindObjectsOfType(MeshCollider::GetType());
+                for (auto i: things->ToVector()) {
+                    auto col = (MeshCollider *) i;
+                    if (col != nullptr) {
+                        col->SetEnabled(!lastVal);
+                    }
+                }
+            }
+        }
     }
 };
