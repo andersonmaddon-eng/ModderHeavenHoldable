@@ -49,17 +49,14 @@ public:
             },
             {//Credits - 7
                     ButtonInfo {.buttonText = "back", .method = []() { Settings::setCurrentCategory(0); }, .isTogglable = false, .toolTip = "Goes back to main menu"},
-                    ButtonInfo {.buttonText = "Glitch", .isTogglable = false, .toolTip = "Ported the menu from iiDk's template and the dev of this template"},
-                    ButtonInfo {.buttonText = "Ossuary", .isTogglable = false, .toolTip = "Taught me how to mod :D"},
-                    ButtonInfo {.buttonText = "Pubert", .isTogglable = false, .toolTip = "Helped me a lot with the code"},
-                    ButtonInfo {.buttonText = "Notfishvr", .isTogglable = false, .toolTip = "Helped me a lot debugging"},
+                    ButtonInfo {.buttonText = "Yummy", .isTogglable = false, .toolTip = "Made the holdable"},
+                    ButtonInfo {.buttonText = "Candyy", .isTogglable = false, .toolTip = "Owner Of Modder Heaven :)"},
             },
             {//Cool people - 8
                     ButtonInfo {.buttonText = "back", .method = []() { Settings::setCurrentCategory(0); }, .isTogglable = false, .toolTip = "Goes back to main menu"},
-                    ButtonInfo {.buttonText = "Bsu", .isTogglable = false, .toolTip = "Cool person :D"},
-                    ButtonInfo {.buttonText = "Oxg", .isTogglable = false, .toolTip = "Cool person :D"},
-                    ButtonInfo {.buttonText = "Crimson", .isTogglable = false, .toolTip = "Cool person :D"},
-                    ButtonInfo {.buttonText = "W1ingz", .isTogglable = false, .toolTip = "Cool person :D"},
+                    ButtonInfo {.buttonText = "Katana", .isTogglable = false, .toolTip = "Making the GUI"},
+                    ButtonInfo {.buttonText = "W1ngz", .isTogglable = false, .toolTip = "Cool person, idk what else to say."},
+ButtonInfo {.buttonText = "BigBoi", .isTogglable = false, .toolTip = "Reason I started modding :D"},
             },
     };
 };
