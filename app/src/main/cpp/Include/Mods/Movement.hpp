@@ -92,5 +92,16 @@ public:
         } else {
             gun.Cleanup();
         }
+        static void NoTagFreeze() {
+        auto gorillaPlayerObj = GameObject::Find("GorillaPlayer");
+        if (!gorillaPlayerObj) return;
+        auto playerComp = gorillaPlayerObj->GetComponent(Class("GorillaLocomotion", "Player").GetMonoType());
+        if (!playerComp) return;
+        auto disableField = Class("GorillaLocomotion", "Player").GetField("disableMovement");
+        if (disableField.IsValid()) {
+            bool ptr = (bool) ((uintptr_t) playerComp + disableField.GetOffset());
+            *ptr = false;
+        }
+    }
     }
 };
